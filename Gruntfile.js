@@ -33,18 +33,15 @@ module.exports = function(grunt) {
       default_options: {
         options: {
           cwd: '.',
-          ak: '<Your AccessKey>',
-          sk: '<Your SecretKey>',
+          ak: '<Your AccessKey env var>',
+          sk: '<Your SecretKey env var>',
           bucket: '<Bucket>',
           removeExistOnly: false,
           overwrite: true,
           assets: [{
-            src: 'test/upload/assets/css',
-            prefix: 'assets/css/',
+            src: 'test/upload/assets',
+            prefix: '',
             // skip: ['b.css']
-          },{
-            src: 'test/upload/assets/js',
-            prefix: 'assets/js/'
           }]
         }
       }

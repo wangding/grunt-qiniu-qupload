@@ -3,12 +3,13 @@
 > a grunt plugin which can upload assets to qiniu.
 
 ## Getting Started
+
 This plugin requires Grunt `~0.4.5`
 
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
 ```shell
-npm install grunt-qiniu-qupload --save-dev
+npm install @wangding/grunt-qiniu-qupload --save-dev
 ```
 
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
@@ -20,6 +21,7 @@ grunt.loadNpmTasks('grunt-qiniu-qupload');
 ## The "qiniu_qupload" task
 
 ### Overview
+
 In your project's Gruntfile, add a section named `qiniu_qupload` to the data object passed into `grunt.initConfig()`.
 
 ```js
@@ -27,18 +29,13 @@ grunt.initConfig({
   qiniu_qupload: {
     default_options: {
       options: {
-        ak: '<Your AccessKey>',           // required, default null
-        sk: '<Your SecretKey>',           // required, default null
+        ak: '<Your AccessKey env var>',   // required, default null
+        sk: '<Your SecretKey env var>',   // required, default null
         bucket: '<Bucket>',               // required, default null
-        removeExistOnly: false,           // optional, default false
-        overwrite: true,                  // optional, default false
         assets: [{                        // required, default null
-          src: 'test/upload/assets/css',  // required
-          prefix: 'assets/css/',          // required, use '' when no prefix
+          src: 'test/upload/assets',      // required
+          prefix: '',                     // required, use '' when no prefix
           // skip: ['b.css'],             // optional, default undefined
-        },{
-          src: 'test/upload/assets/js',
-          prefix: 'assets/js/'
         }]
       }
     }
@@ -49,42 +46,35 @@ grunt.initConfig({
 ### Options
 
 #### options.cwd
+
 Type: `String`
 Default value: `'.'`
 
 current working directory, use to resolve assets path.
 
 #### options.ak
+
 Type: `String`
 Default value: `null`
 
-<Your AccessKey>.
+<Your AccessKey env variable>.
 
 #### options.sk
+
 Type: `String`
 Default value: `null`
 
-<Your AccessKey>.
+<Your AccessKey env variable>.
 
 #### options.bucket
+
 Type: `String`
 Default value: `null`
 
 qiniu bucket where you want to upload your file.
 
-#### options.removeExistOnly
-Type: `Boolean`
-Default value: `false`
-
-remove existing files without upload files. (Notice: files in `<skip list>` will not be affect.)
-
-#### options.overwrite
-Type: `Boolean`
-Default value: `false`
-
-if overwrite existing files.
-
 #### options.assets
+
 Type: `Array`
 Default value: `null`
 
@@ -99,27 +89,24 @@ grunt.initConfig({
   qiniu_qupload: {
     default_options: {
       options: {
-        ak: '<Your AccessKey>',           // required, default null
-        sk: '<Your SecretKey>',           // required, default null
+        ak: '<Your AccessKey env var>',   // required, default null
+        sk: '<Your SecretKey env var>',   // required, default null
         bucket: '<Bucket>',               // required, default null
-        removeExistOnly: false,           // optional, default false
-        overwrite: true,                  // optional, default false
         assets: [{                        // required, default null
-          src: 'test/upload/assets/css',  // required
-          prefix: 'assets/css/',          // required, use '' when no prefix
+          src: 'test/upload/assets',      // required
+          prefix: '',                     // required, use '' when no prefix
           // skip: ['b.css'],             // optional, default undefined
-        },{
-          src: 'test/upload/assets/js',
-          prefix: 'assets/js/'
         }]
       }
     }
-  },
+  }
 });
 ```
 
 ## Contributing
+
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
+
 _(Nothing yet)_

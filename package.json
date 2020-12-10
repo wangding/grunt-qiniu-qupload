@@ -1,23 +1,23 @@
 {
-  "name": "grunt-qiniu-qupload",
+  "name": "@wangding/grunt-qiniu-qupload",
   "description": "a grunt plugin which can upload assets to qiniu.",
-  "version": "0.1.6",
-  "homepage": "https://github.com/wjs/grunt-qiniu-qupload",
+  "version": "0.2.1",
+  "homepage": "https://github.com/wangding/grunt-qiniu-qupload",
   "author": {
-    "name": "wjs",
-    "email": "weijinsh@gmail.com"
+    "name": "wangding",
+    "email": "408542507@qq.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/wjs/grunt-qiniu-qupload.git"
+    "url": "git://github.com/wangding/grunt-qiniu-qupload.git"
   },
   "bugs": {
-    "url": "https://github.com/wjs/grunt-qiniu-qupload/issues"
+    "url": "https://github.com/wangding/grunt-qiniu-qupload/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/wjs/grunt-qiniu-qupload/blob/master/LICENSE-MIT"
+      "url": "https://github.com/wangding/grunt-qiniu-qupload/blob/master/LICENSE-MIT"
     }
   ],
   "engines": {
@@ -38,7 +38,7 @@
   "keywords": [
     "gruntplugin",
     "qiniu upload",
-    "七牛"
+    "qiniu"
   ],
   "dependencies": {
     "qiniu": "^6.1.8"
